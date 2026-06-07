@@ -1,0 +1,238 @@
+source:
+  name: Wolt Romania Iasi restaurant categories
+  site: https://wolt.ro/en/rou/iasi
+  endpoint: https://consumer-api.wolt.com/v1/pages/category/restaurants
+  method: POST
+  scrapedAt: '2026-06-01'
+  requestBody:
+    lat: 47.157435
+    lon: 27.5815901
+  notes:
+    - Wolt category pages are requested with public web headers, a web client id header, and a latitude/longitude JSON body.
+    - Filtered restaurant categories reuse the restaurants endpoint with sorting_and_filtering.sections[].values[].slug.
+categories:
+  - title: Breakfast
+    slug: breakfast
+    filterSlug: breakfast
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/breakfast-light.png
+  - title: Brunch
+    slug: brunch
+    filterSlug: brunch
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/brunch-light.png
+  - title: Dessert
+    slug: dessert
+    filterSlug: dessert
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/dessert-light.png
+  - title: Bakery
+    slug: bakery
+    filterSlug: bakery
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/bakery-light.png
+  - title: Pizza
+    slug: pizza
+    filterSlug: pizza
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/pizza-light.png
+  - title: Burger
+    slug: burger
+    filterSlug: burger
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/burger-light.png
+  - title: Sandwich
+    slug: sandwich
+    filterSlug: sandwich
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/sandwich-light.png
+  - title: Pasta
+    slug: pasta
+    filterSlug: pasta
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/pasta-light.png
+  - title: Asian
+    slug: asian
+    filterSlug: asian
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/asian-light.png
+  - title: Chinese
+    slug: chinese
+    filterSlug: chinese
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/chinese-light.png
+  - title: Japanese
+    slug: japanese
+    filterSlug: japanese
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/japanese-light.png
+  - title: Indian
+    slug: indian
+    filterSlug: indian
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/indian-light.png
+  - title: Italian
+    slug: italian
+    filterSlug: italian
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/italian-light.png
+  - title: American
+    slug: american
+    filterSlug: american
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/american-light.png
+  - title: Middle Eastern
+    slug: middle-eastern
+    filterSlug: middle-eastern
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/mediterranean-light.png
+  - title: European
+    slug: european
+    filterSlug: european
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/european-light.png
+  - title: Mexican
+    slug: mexican
+    filterSlug: mexican
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/mexican-light.png
+  - title: Healthy
+    slug: healthy
+    filterSlug: healthy
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/healthy-light.png
+  - title: Turkish
+    slug: turkish
+    filterSlug: turkish
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/turkish-light.png
+  - title: Vegan
+    slug: vegan
+    filterSlug: vegan
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/vegan-light.png
+  - title: Vegetarian
+    slug: vegetarian
+    filterSlug: vegetarian
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/vegetarian-light.png
+  - title: BBQ
+    slug: bbq
+    filterSlug: bbq
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/bbq-light.png
+  - title: Chicken
+    slug: chicken
+    filterSlug: chicken
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/chicken-light.png
+  - title: Seafood
+    slug: seafood
+    filterSlug: seafood
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/seafood-light.png
+  - title: Sushi
+    slug: sushi
+    filterSlug: sushi
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/sushi-light.png
+  - title: Noodles
+    slug: noodles
+    filterSlug: noodles
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/noodles-light.png
+  - title: Curry
+    slug: curry
+    filterSlug: curry
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/curry-light.png
+  - title: Soup
+    slug: soup
+    filterSlug: soup
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/soup-light.png
+  - title: Salad
+    slug: salad
+    filterSlug: salad
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/salad-light.png
+  - title: International
+    slug: international
+    filterSlug: international
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/international-light.png
+  - title: Asian Soup
+    slug: asian-soup
+    filterSlug: asian-soup
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/asian-soup-light.png
+  - title: Dumplings
+    slug: dumplings
+    filterSlug: dumplings
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/dumplings-light.png
+  - title: Homemade
+    slug: homemade
+    filterSlug: homemade
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/homemade-light.png
+  - title: Pancakes
+    slug: pancakes
+    filterSlug: pancakes
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/pancakes-light.png
+  - title: Cakes
+    slug: cakes
+    filterSlug: cakes
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/cakes-light.png
+  - title: Ice cream
+    slug: ice-cream
+    filterSlug: ice-cream
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/ice-cream-light.png
+  - title: Smoothie
+    slug: smoothie
+    filterSlug: smoothie
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/smoothie-light.png
+  - title: Fish
+    slug: fish
+    filterSlug: fish
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/fish-light.png
+  - title: Kebab
+    slug: kebab
+    filterSlug: kebab
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/kebab-light.png
+  - title: Bowl
+    slug: bowl
+    filterSlug: bowl
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/bowl-light.png
+  - title: Romanian
+    slug: romanian
+    filterSlug: romanian
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/romanian-light.png
+  - title: Coffee & Tea
+    slug: coffee-and-tea
+    filterSlug: coffee-and-tea
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/cafe-light.png
+  - title: Cafe
+    slug: cafe
+    filterSlug: cafe
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/cafe-light.png
+  - title: Doner
+    slug: doner
+    filterSlug: doner
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/doner-light.png
+  - title: Cocktail
+    slug: cocktail
+    filterSlug: cocktail
+    sectionSlug: category
+    image: https://imageproxy.wolt.com/static-assets/content-navigation/v3/rx-icons-v3/cocktail-light.png

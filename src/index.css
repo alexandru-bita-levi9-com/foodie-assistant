@@ -1,0 +1,58 @@
+:root {
+  --bg: #f6f7f4;
+  --surface: #ffffff;
+  --surface-muted: #eef3f1;
+  --text: #28302f;
+  --text-soft: #66706d;
+  --border: #dbe3df;
+  --accent: #007a68;
+  --accent-strong: #005b50;
+  --accent-soft: #dff4ee;
+  --danger: #b84032;
+  --danger-soft: #fde8e3;
+  --warm: #f1a33c;
+  --shadow: rgba(24, 38, 35, 0.12) 0 16px 42px;
+  --radius: 8px;
+  --font: Inter, ui-sans-serif, system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  color: var(--text);
+  background: var(--bg);
+  font: 16px/1.45 var(--font);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled,
+textarea:disabled,
+input:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100svh;
+}
