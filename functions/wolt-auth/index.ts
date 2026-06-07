@@ -2,13 +2,26 @@ export async function onRequest(context: any) {
   const { request, env } = context
   const url = new URL(request.url)
   const base = '/wolt-auth'
-  let path = url.pathname.startsWith(base) ? url.pathname.slice(base.length) : url.pathname
-  if (path === '' || path === '/') {
-    path = ''
-  } else if (!path.startsWith('/')) {
-    path = '/' + path
+  // Allow requests to pass the upstream path in the `path` query param
+  // e.g. POST /wolt-auth?path=/v1/wauth2/access_token
+  const qp = url.searchParams.get('path')
+  let path = ''
+  if (qp) {
+    path = qp.startsWith('/') ? qp : '/' + qp
+  } else {
+    path = url.pathname.startsWith(base) ? url.pathname.slice(base.length) : url.pathname
+    if (path === '' || path === '/') {
+      path = ''
+    } else if (!path.startsWith('/')) {
+      path = '/' + path
+    }
   }
-  const upstream = `https://authentication.wolt.com${path}${url.search}`
+
+  // Rebuild query string excluding our internal `path` param
+  const params = new URLSearchParams(url.searchParams)
+  params.delete('path')
+  const qs = params.toString()
+  const upstream = `https://authentication.wolt.com${path}${qs ? `?${qs}` : ''}`
 
   const forwarded = new Headers(request.headers)
   forwarded.set('Origin', 'https://wolt.com')

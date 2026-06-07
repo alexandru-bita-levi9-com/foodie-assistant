@@ -84,7 +84,8 @@ interface WoltAssortmentItem {
   tags?: Array<{ id?: string; label?: string }>
 }
 
-const apiPath = (path: string) => `${WOLT_API_PREFIX}${path}`
+const proxyPath = (prefix: string, path: string) => `${prefix}?path=${encodeURIComponent(path)}`
+const apiPath = (path: string) => proxyPath(WOLT_API_PREFIX, path)
 
 const buildAuthValue = (headerName: string, token: string) => {
   if (!token.trim()) return ''
@@ -133,7 +134,7 @@ const refreshWoltAuthToken = async (authContext: WoltAuthContext, signal: AbortS
     throw new Error('Wolt returned 401 and no refresh token is configured.')
   }
 
-  const response = await fetch(`${WOLT_AUTH_PREFIX}/v1/wauth2/access_token`, {
+  const response = await fetch(proxyPath(WOLT_AUTH_PREFIX, '/v1/wauth2/access_token'), {
     method: 'POST',
     headers: {
       accept: 'application/json, text/plain, */*',
