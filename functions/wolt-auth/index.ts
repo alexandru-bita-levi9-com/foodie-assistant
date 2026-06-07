@@ -53,8 +53,8 @@ export async function onRequest(context: any) {
       init.body = params.toString()
       init.headers.set('content-type', 'application/x-www-form-urlencoded')
     } else {
-      // forward original body
-      if (request.method !== 'GET' && request.method !== 'HEAD') init.body = request.body
+      // forward original body - we already consumed it into `bodyText`, so reuse that
+      if (request.method !== 'GET' && request.method !== 'HEAD') init.body = bodyText
     }
   } else {
     if (request.method !== 'GET' && request.method !== 'HEAD') init.body = request.body
