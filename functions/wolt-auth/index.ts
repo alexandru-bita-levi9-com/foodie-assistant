@@ -1,7 +1,13 @@
 export async function onRequest(context: any) {
-  const { request, env, params } = context
+  const { request, env } = context
   const url = new URL(request.url)
-  const path = params?.path ? `/${params.path.join('/')}` : ''
+  const base = '/wolt-auth'
+  let path = url.pathname.startsWith(base) ? url.pathname.slice(base.length) : url.pathname
+  if (path === '' || path === '/') {
+    path = ''
+  } else if (!path.startsWith('/')) {
+    path = '/' + path
+  }
   const upstream = `https://authentication.wolt.com${path}${url.search}`
 
   const forwarded = new Headers(request.headers)
